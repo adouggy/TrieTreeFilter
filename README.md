@@ -18,8 +18,10 @@ Although hash gives O(1) for 'contains' operation, this ignore the fact compare 
 In trie, isPrefix operation reduce the time when comparing two words.
 
 
-###About Trie Tree implement
-inspirit by a post from: <http://notdennisbyrne.blogspot.com/2008/12/javascript-trie-implementation.html>
+###About Trie Tree
+Inspirit by a post from: <http://notdennisbyrne.blogspot.com/2008/12/javascript-trie-implementation.html>
+So, if we want filter a post with some sensetive words, total time consumption should be:  
+O(NxTrieHeight), which N instead of N words in post and TrieHeight instead of longest words in filter dictionary.  
 
 ###About Chinese split
 目前采用Segment模块，基于Node.js，详情见:<https://github.com/leizongmin/node-segment>
