@@ -60,3 +60,5 @@ TrieTree.Node.prototype.printDF = function(){
 
   }
 }
+
+module.exports.Node = TrieTree.Node
