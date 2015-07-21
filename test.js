@@ -6,6 +6,18 @@
  */
 
 var filter = require('./filter.js');
+var fs = require('fs');
 
-filter.init( ['法轮功', '傻逼'] );
-console.log( filter.filter( '中华人民共和国万岁，万岁，万万岁;法轮功无疆，无疆，无江江' ) );
+// init filter trie tree
+try{
+	var data = fs.readFileSync('./filter_dict.txt', 'utf8');
+	var arr = data.split('\n');
+	arr = ['中共', '中国共产党', '中共暴政'];
+	// console.log(arr);
+ 	filter.init( arr );
+}catch(err){
+	return console.log(err);
+}
+
+// console.log( filter.filter("中共") );
+//console.log( filter.filter( '这是一篇特别特别妈的长的文章,这是一篇特别特别他妈的长的文章,共产党这是一篇特别特别他妈的长的文章,这是一篇特别特别他妈的长的文章,这是一篇特别特别他妈的长的文章,这是一篇特别特别他妈的长的文章,这是一篇特别特别他妈的长的文章,这是一篇特别特别他妈的长的文章,这是一篇特别特别他妈的长的文章,这是一篇特别特别他妈的长的文章,这是一篇特别特别他妈的长的文章,这是一篇特别特别他妈的长的文章,' ) );

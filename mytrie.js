@@ -29,7 +29,7 @@ TrieTree.Node.prototype.contains = function(word) {
   var child = this.children[k];
   
   if( child ){
-     if( Object.keys(child.children).length == 0 && word.length == 1){
+     if( /*Object.keys(child.children).length == 0 &&*/ word.length == 1){
       return true;
     }
     return child.contains( word.substring(1) );
