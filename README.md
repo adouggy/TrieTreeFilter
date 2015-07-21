@@ -1,8 +1,10 @@
 ##TrieTreeFilter
 
-javascript extension for spam word filtering via Trie tree  
-本工程用于匹配关键词，基于Trie Tree。  
-灵感源自php版本的关键词过滤组件，但是node.js却很难搜索到相关组件。  
+Javascript extension for spam word filtering via Trie tree.  
+This project should run as server side.  
+
+本工程用于匹配关键词，基于Trie Tree。对于中文分词模块则采用开源的Node.js工程，详见<###About Chinese split>  
+
 
 ###Why not regex?
 Its pretty easy just find the filter words in a post via regex, but still, time issue.
