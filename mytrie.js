@@ -24,14 +24,18 @@ TrieTree.Node.prototype.add = function(word) {
 TrieTree.Node.prototype.contains = function(word) {
   if( !word )
     return false;
+
   var k = word.charAt(0);
   var child = this.children[k];
+  
   if( child ){
+     if( Object.keys(child.children).length == 0 && word.length == 1){
+      return true;
+    }
     return child.contains( word.substring(1) );
   }
-  else{
-    return false;
-  }
+ 
+  return false;
 }
 
 /**
