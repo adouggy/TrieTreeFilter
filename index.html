@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trie Tree Spam Filter</title>
+	<script type="text/javascript" src="mytrie.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+	console.log("hello trie tree");
+	var root = new TrieTree.Node();
+	root.add("abc");
+	root.add("abd");
+	root.add("cde");
+	//root.add("你大爷的");
+
+	root.printDF();
+
+	console.log( "test 1:" + root.contains("abe") );
+	console.log( "test 2:" + root.contains("abc") );
+	console.log( "test 3:" + root.contains("abcee") );
+</script>
+
+</body>
+</html>
