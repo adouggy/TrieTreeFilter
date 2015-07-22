@@ -1,5 +1,6 @@
 /**
  * Chinese splitter facade, which, can replace splitter easily in the future.
+ * 2015-7
  * @author Ade.Li <251089564@qq.com>
  */
 

@@ -14,7 +14,7 @@ function init(filterWords){
 	for( var i =0; i<filterWords.length; i++ ){
 		root.add( filterWords[i] );
 	}
-	root.printDF();
+	//root.printDF();
 	console.log( root.contains("中共") );
 }
 
@@ -26,7 +26,7 @@ function init(filterWords){
 function filter(post){
 	var res = [];
 	var arr = splitter.split( post );
-	console.log( "split:" + arr );
+	//console.log( "split:" + arr );
 	for( var i=0; i<arr.length; i++ ){
 		if( root.contains( arr[i] ) ){
 			res.push( arr[i] );

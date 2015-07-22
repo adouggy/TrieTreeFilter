@@ -1,11 +1,13 @@
 /**
  * the implement of Trie Tree
+ * 2015-7
  * @author Ade.Li <251089564@qq.com>
  */
-TrieTree = {};
+TrieTree = {}; //namespce for non-node js engine.
 
 TrieTree.Node = function(){
   this.data = ''; // character
+  this.isOnlyPrefix = true; // indicate this should be the end of a word, not just a prefix
   this.children = []; // type hash, character->TrieTree.Node
 };
 
@@ -16,6 +18,9 @@ TrieTree.Node.prototype.add = function(word) {
   var k = word[0];
   if( !this.children[k] ){
     this.children[k] = new TrieTree.Node();
+  }
+  if( word.length == 1 ){
+    this.children[k].isOnlyPrefix = false;
   }
   this.children[k].data = k;
   this.children[k].add( word.substring(1) );
@@ -29,7 +34,8 @@ TrieTree.Node.prototype.contains = function(word) {
   var child = this.children[k];
   
   if( child ){
-     if( /*Object.keys(child.children).length == 0 &&*/ word.length == 1){
+    if( child.isOnlyPrefix == false && word.length == 1){
+      //hit last one
       return true;
     }
     return child.contains( word.substring(1) );
