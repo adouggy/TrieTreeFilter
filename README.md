@@ -22,12 +22,17 @@ In trie, isPrefix operation reduce the time when comparing two words.
 Inspirit by a post from: <http://notdennisbyrne.blogspot.com/2008/12/javascript-trie-implementation.html>
 So, if we want filter a post with some sensetive words, total time consumption should be:  
 O(NxTrieHeight), which N instead of N words in post and TrieHeight instead of longest words in filter dictionary.  
+  
+Chinese vs Alphabat:  
+Chinese will introduce a much bigger tree than alphabat, see benchmark.
 
 ###About Chinese split
+We use a opensource project name Node-Segment, which based on Node.js, see more at: <https://github.com/leizongmin/node-segment>
 目前采用Segment模块，基于Node.js，详情见:<https://github.com/leizongmin/node-segment>
 
-###未来改进
-纯Trie Tree并不是最高效的匹配方式，未来将改进为Aho–Corasick算法:<https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm>
+###Future improvement
+Pure trie tree is not the best method, to improve, see Aho-Corasick algorithm at: <https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm>
+纯Trie tree并不是最高效的匹配方式，未来将改进为Aho–Corasick算法: <https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm>
 
 
 ## MIT License
