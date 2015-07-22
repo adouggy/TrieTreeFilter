@@ -46,14 +46,6 @@ for( var i=0; i<testCount; i++ ){
 console.log("res:" + res);
 printInterval(time);
 
-//
-// console.log("Test Hash");
-// time = Date.now();
-// for( var i=0; i<testCount; i++ ){
-// 	res = hashFilter(post);
-// }
-// console.log("res:" + res);
-// printInterval(time);
 
 //
 console.log("Test Trie");
@@ -82,25 +74,6 @@ function regexFilter(post){
 	}
 	return res;
 }
-
-// function hashFilter(post){
-// 	//need split here
-// 	var hash = [];
-// 	time = Date.now();
-// 	var arr = filter.split(post);
-// 	console.log( Date.now() - time );
-// 	for( var i=0; i<arr.length; i++ ){
-// 		hash[arr[i]] = 1;
-// 	}
-// 	var res = [];
-// 	for( var i=0; i<filterWords.length; i++ ){
-// 		if( hash[filterWords[i]] == 1 ){
-// 			res.push( filterWords[i] );
-// 			break;
-// 		}
-// 	}
-// 	return res;
-// }
 
 
 

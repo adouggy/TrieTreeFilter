@@ -23,26 +23,21 @@ Run it under node, to see benchmark
 
 ### Benchmark
 ```
-construct trie tree, time cost:27(mili)
 Test Regex
-res:共产党
-interval:177(mili), average:0.177(mili)
-Test Hash
-res:共产党
-interval:3890(mili), average:3.89(mili)
+res:中共
+post length:1161 interval:24(mili), average:0.024(mili)
+
 Test Trie
 res:共产党
-interval:3904(mili), average:3.904(mili)
+post length:1161 interval:12(mili), average:0.012(mili)
 ```
 
 ### Why not regex?
-It's pretty easy just find the filter words in a post via regex, but still, time issue.  
+It's pretty easy just find the filter words in a post via regex, but , time issue.  
 See the benchmark.
 
 ### Why not hash?
-Although hash gives O(1) for 'contains' operation, this ignore the fact compare operation consumes the time.  
-In trie, isPrefix operation reduce the time when comparing two words.  
-See the benchmark.
+Although hash gives O(1) for 'contains' operation, but we need split the post into words, which the time consumption is much higher than comparing.
 
 ### About trie tree
 Inspirit by a [post](http://notdennisbyrne.blogspot.com/2008/12/javascript-trie-implementation.html)  
