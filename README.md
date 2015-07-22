@@ -50,7 +50,7 @@ If we want filter a post with some sensetive words, total time consumption shoul
 ```
 O( N x TrieHeight )
 ```
-which N instead of N characters in post and TrieHeight instead of longest words in filter dictionary.  
+which N is near the character count in post and TrieHeight instead of longest words in filter dictionary.  
 
 ### Future improvement
 Pure trie tree is not the best method, to improve, see [Aho-Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm)  

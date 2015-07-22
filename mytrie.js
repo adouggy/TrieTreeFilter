@@ -26,6 +26,9 @@ TrieTree.Node.prototype.add = function(word) {
   this.children[k].add( word.substring(1) );
 };
 
+/**
+ * to see the word in a trie
+ */
 TrieTree.Node.prototype.contains = function(word) {
   if( !word )
     return false;
@@ -67,4 +70,52 @@ TrieTree.Node.prototype.printDF = function(){
   }
 }
 
+/**
+ * to see the any word in post exists in trie
+ * pretty cool to iterate all post via trie, ah~
+ * return hit words
+ */
+function containsAny(root, post) {
+  if( !post || !root )
+    return [];
+
+  var res = [];
+  var node = root;
+  var w = '';
+  for( var i=0; i<post.length; i++ ){
+    var k = post.charAt(i);
+    var child = node.children[k];
+    if( child ){
+      w += k;
+      node = child;
+      if( child.isOnlyPrefix == false ){
+        res.push( w );
+        return res;
+      }
+    }else{
+      if( node != root ){
+        i-=w.length;
+        node = root;
+        w = '';
+      }
+    }
+  }
+ 
+  return res;
+}
+
 module.exports.Node = TrieTree.Node
+module.exports.containsAny = containsAny
+
+
+// just for test...
+// var root = new TrieTree.Node();
+// root.add("abc");
+// root.add("abd");
+// root.add("cde");
+// root.add("bac");
+
+// console.log( containsAny( root, "babcd" ) );
+// console.log( containsAny( root, "abc" ) );
+// console.log( containsAny( root, "cde" ) );
+// console.log( containsAny( root, "aacdefff" ) );
