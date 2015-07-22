@@ -22,7 +22,12 @@ function init(filterWords){
  * return [fitler words] if post failed, and the result set is the reason
  */
 function filter(post){
-	return trie.containsAny( root, post );
+	try{
+		return trie.containsAny( root, post );
+	}catch(err){
+		console.log(err);
+		return [];
+	}
 }
 
 module.exports.init = init;
