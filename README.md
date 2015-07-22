@@ -3,10 +3,27 @@
 Javascript extension for spam word filtering via Trie tree.  
 This project should run as server side.  
 
-本工程用于匹配关键词，基于Trie Tree。对于中文分词模块则采用开源的Node.js工程，详见<###About Chinese split>  
+本工程用于匹配关键词，基于Trie Tree。对于中文分词模块则采用开源的Node.js工程，详见(#About Chinese split)  
+
+## Index
+
+- [Run the project](#Run the project)
+
+- [Why not regex?](#Why not regex?)
+
+- [Why not hash?](#Why not hash?)
+
+- [About Trie Tree](#About Trie Tree)
+
+- [About Chinese split](#About Chinese split)
+
+- [Future improvement](#Future improvement)
+
+- [MIT License](# MIT License)
 
 ###Run the project
-First, install Chinese split module: npm install segment --save  
+First, install Chinese split module:   
+	npm install segment --save  
 Sechond, run it under node.
 
 ###Why not regex?
