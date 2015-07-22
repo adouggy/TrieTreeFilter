@@ -8,8 +8,8 @@ This project should run as server side.
 ## Index
 
 - [Run the project](#run-the-project)
-- [Why not regex?](#why-not-regex?)
-- [Why not hash?](#why-not-hash?)
+- [Why not regex?](#why-not-regex)
+- [Why not hash?](#why-not-hash)
 - [About Trie Tree](#about-trie-tree)
 - [About Chinese split](#about-chinese-split)
 - [Future improvement](#future-improvement)
