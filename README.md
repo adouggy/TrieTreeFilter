@@ -26,17 +26,21 @@ Sechond, run it under node.
 ```
 
 ###Why not regex?
-Its pretty easy just find the filter words in a post via regex, but still, time issue.  
+It's pretty easy just find the filter words in a post via regex, but still, time issue.  
 See the benchmark.
 
 ###Why not hash?
 Although hash gives O(1) for 'contains' operation, this ignore the fact compare operation consumes the time.  
-In trie, isPrefix operation reduce the time when comparing two words.
+In trie, isPrefix operation reduce the time when comparing two words.  
+See the benchmark.
 
 ###About trie tree
 Inspirit by a [post](http://notdennisbyrne.blogspot.com/2008/12/javascript-trie-implementation.html)  
-So, if we want filter a post with some sensetive words, total time consumption should be:  
-O(NxTrieHeight), which N instead of N words in post and TrieHeight instead of longest words in filter dictionary.  
+If we want filter a post with some sensetive words, total time consumption should be:  
+```
+O(NxTrieHeight)
+```
+which N instead of N words in post and TrieHeight instead of longest words in filter dictionary.  
   
 Chinese vs Alphabat:  
 Chinese will introduce a much bigger tree than alphabat, see benchmark.
