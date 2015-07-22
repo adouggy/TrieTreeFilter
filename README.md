@@ -8,6 +8,7 @@ This project should run as server side.
 ## Index
 
 - [Run the project](#run-the-project)
+- [Benchmark](#benchmark)
 - [Why not regex?](#why-not-regex)
 - [Why not hash?](#why-not-hash)
 - [About Trie Tree](#about-trie-tree)
