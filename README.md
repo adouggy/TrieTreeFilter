@@ -1,9 +1,7 @@
 ##TrieTreeFilter
 
 Javascript extension for spam word filtering via Trie tree.  
-This project should run as server side.  
-
-本工程用于匹配关键词，基于Trie Tree。对于中文分词模块则采用开源的Node.js工程，详见(#About Chinese split)  
+This project should run at server side.
 
 ## Index
 
