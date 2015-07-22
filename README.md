@@ -12,16 +12,11 @@ This project should run as server side.
 - [Why not regex?](#why-not-regex)
 - [Why not hash?](#why-not-hash)
 - [About Trie Tree](#about-trie-tree)
-- [About Chinese split](#about-chinese-split)
 - [Future improvement](#future-improvement)
 - [MIT License](#mit-license)
 
 ### Run the project
-First, install Chinese split module:
-```shell   
-	npm install segment --save  
-```
-Second, run it under node.
+Run it under node, to see benchmark
 ```shell  
 	node ./test.js
 ```
@@ -29,18 +24,12 @@ Second, run it under node.
 ### Benchmark
 ```
 construct trie tree, time cost:27(mili)
-
-
 Test Regex
 res:共产党
 interval:177(mili), average:0.177(mili)
-
-
 Test Hash
 res:共产党
 interval:3890(mili), average:3.89(mili)
-
-
 Test Trie
 res:共产党
 interval:3904(mili), average:3.904(mili)
@@ -61,14 +50,7 @@ If we want filter a post with some sensetive words, total time consumption shoul
 ```
 O( N x TrieHeight )
 ```
-which N instead of N words in post and TrieHeight instead of longest words in filter dictionary.  
-  
-Chinese vs Alphabat:  
-Chinese will introduce a much bigger tree than alphabat, see benchmark.
-
-### About Chinese split
-We use a opensource project name Node-Segment, which based on Node.js, [see more](https://github.com/leizongmin/node-segment)  
-目前采用Segment模块, 基于Node.js, [详情](https://github.com/leizongmin/node-segment)
+which N instead of N characters in post and TrieHeight instead of longest words in filter dictionary.  
 
 ### Future improvement
 Pure trie tree is not the best method, to improve, see [Aho-Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm)  
