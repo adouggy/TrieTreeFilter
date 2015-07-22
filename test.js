@@ -59,7 +59,7 @@ function printInterval(startTime){
 	var interval = Date.now() - time;
 	var average = interval / testCount;
 	console.log("interval:" + interval + "(mili), average:" + average + "(mili)");
-	console.log("\n");
+	console.log("");
 }
 
 function regexFilter(post){
@@ -76,7 +76,9 @@ function regexFilter(post){
 function hashFilter(post){
 	//need split here
 	var hash = [];
+	time = Date.now();
 	var arr = filter.split(post);
+	console.log( Date.now() - time );
 	for( var i=0; i<arr.length; i++ ){
 		hash[arr[i]] = 1;
 	}
