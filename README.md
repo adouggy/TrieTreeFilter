@@ -1,7 +1,7 @@
 ##TrieTreeFilter
 
-Javascript program for spam word filtering via Trie tree.  
-This project should run at server side.
+javascript program for spam word filtering via trie tree.  
+can run as a node js project.
 
 ## Index
 
