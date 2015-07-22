@@ -1,6 +1,6 @@
 ##TrieTreeFilter
 
-Javascript extension for spam word filtering via Trie tree.  
+Javascript program for spam word filtering via Trie tree.  
 This project should run at server side.
 
 ## Index
