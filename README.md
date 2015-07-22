@@ -25,6 +25,26 @@ Second, run it under node.
 	node ./test.js
 ```
 
+### Benchmark
+```
+construct trie tree, time cost:27(mili)
+
+
+Test Regex
+res:共产党
+interval:177(mili), average:0.177(mili)
+
+
+Test Hash
+res:共产党
+interval:3890(mili), average:3.89(mili)
+
+
+Test Trie
+res:共产党
+interval:3904(mili), average:3.904(mili)
+```
+
 ### Why not regex?
 It's pretty easy just find the filter words in a post via regex, but still, time issue.  
 See the benchmark.
