@@ -22,12 +22,12 @@ Run it under node, to see benchmark
 ### Benchmark
 ```
 Test Regex
-res:中共
-post length:1161 interval:24(mili), average:0.024(mili)
+res:操你
+post length:33 interval:14(mili), average:0.014(mili)
 
 Test Trie
-res:共产党
-post length:1161 interval:12(mili), average:0.012(mili)
+res:操你
+post length:33 interval:6(mili), average:0.006(mili)
 ```
 
 ### Why not regex?
