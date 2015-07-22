@@ -8,35 +8,29 @@ This project should run as server side.
 ## Index
 
 - [Run the project](#Run the project)
-
 - [Why not regex?](#Why not regex?)
-
 - [Why not hash?](#Why not hash?)
-
 - [About Trie Tree](#About Trie Tree)
-
 - [About Chinese split](#About Chinese split)
-
 - [Future improvement](#Future improvement)
-
 - [MIT License](# MIT License)
 
 ###Run the project
 First, install Chinese split module:   
 	npm install segment --save  
 Sechond, run it under node.
+	node ./test.js
 
 ###Why not regex?
-Its pretty easy just find the filter words in a post via regex, but still, time issue.
+Its pretty easy just find the filter words in a post via regex, but still, time issue.  
 See the benchmark.
 
 ###Why not hash?
 Although hash gives O(1) for 'contains' operation, this ignore the fact compare operation consumes the time.  
 In trie, isPrefix operation reduce the time when comparing two words.
 
-
 ###About Trie Tree
-Inspirit by a post from: <http://notdennisbyrne.blogspot.com/2008/12/javascript-trie-implementation.html>
+Inspirit by a [post](http://notdennisbyrne.blogspot.com/2008/12/javascript-trie-implementation.html)  
 So, if we want filter a post with some sensetive words, total time consumption should be:  
 O(NxTrieHeight), which N instead of N words in post and TrieHeight instead of longest words in filter dictionary.  
   
@@ -44,12 +38,12 @@ Chinese vs Alphabat:
 Chinese will introduce a much bigger tree than alphabat, see benchmark.
 
 ###About Chinese split
-We use a opensource project name Node-Segment, which based on Node.js, see more at: <https://github.com/leizongmin/node-segment>
-目前采用Segment模块，基于Node.js，详情见:<https://github.com/leizongmin/node-segment>
+We use a opensource project name Node-Segment, which based on Node.js, [see more](https://github.com/leizongmin/node-segment)
+目前采用Segment模块，基于Node.js，[详情见](https://github.com/leizongmin/node-segment)
 
 ###Future improvement
-Pure trie tree is not the best method, to improve, see Aho-Corasick algorithm at: <https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm>
-纯Trie tree并不是最高效的匹配方式，未来将改进为Aho–Corasick算法: <https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm>
+Pure trie tree is not the best method, to improve, see [Aho-Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm)
+纯Trie tree并不是最高效的匹配方式，未来将改进为[Aho–Corasick算法](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm)
 
 
 ## MIT License
