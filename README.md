@@ -20,7 +20,7 @@ First, install Chinese split module:
 ```shell   
 	npm install segment --save  
 ```
-Sechond, run it under node.
+Second, run it under node.
 ```shell  
 	node ./test.js
 ```

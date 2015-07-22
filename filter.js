@@ -38,4 +38,5 @@ function filter(post){
 }
 
 module.exports.init = init;
+module.exports.split = splitter.split; //just for test use
 module.exports.filter = filter;
