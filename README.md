@@ -1,5 +1,5 @@
-##TrieTreeFilter
-
+TrieTreeFilter
+===================
 javascript program for spam word filtering via trie tree.  
 can run as a node js project.
 
